@@ -11,4 +11,8 @@ class ProductManager:
         count_price = 0
         for product in self.m_list:
             count_price = count_price + product.m_quality* product.m_price
-        print(count_price)    
+        print(count_price)
+    def remove_product(self,name):
+        for product in self.m_list:
+            if product.m_name == name:
+                self.m_list.remove(product)
